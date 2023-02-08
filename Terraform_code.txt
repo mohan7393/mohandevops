@@ -1,0 +1,90 @@
+For login: in intellij select the terraform path and open
+
+Aws configuration 
+It will ask user name password and region (us-east-1)
+
+Other option
+
+Export AWS_PROFILE=dev (.aws floder updated)
+
+Aws s3 ls ---for checking connection 
+
+Provider.tf
+
+terraform{
+required_providers{
+aws={
+source="hashicorp/aws"
+version="4.53.0"
+}
+}
+}
+
+provider"aws"{
+#Configurationoptions
+region="us-east-1"
+}
+
+
+Ec2.tf
+
+resource"aws_instance""web"{
+ami="ami-0aa7d40eeae50c9a9"
+instance_type="t1.micro"
+key_name="mohanlinuxEC2"
+
+tags={
+Name="aws_linux"
+env="dev"
+}
+}
+
+Terraform  validate
+Terraform plan
+Terraform Apply
+
+For login: in intellij select the terraform path and open
+
+Aws configuration 
+It will ask user name password and region (us-east-1)
+
+Other option
+
+Export AWS_PROFILE=dev (.aws floder updated)
+
+Aws s3 ls ---for checking connection 
+
+Provider.tf
+
+terraform{
+required_providers{
+aws={
+source="hashicorp/aws"
+version="4.53.0"
+}
+}
+}
+
+provider"aws"{
+#Configurationoptions
+region="us-east-1"
+}
+
+------------------------------------------------------------
+Ec2.tf
+
+resource"aws_instance""web"{
+ami="ami-0aa7d40eeae50c9a9"
+instance_type="t1.micro"
+key_name="mohanlinuxEC2"
+
+tags={
+Name="aws_linux"
+env="dev"
+}
+}
+------------------------------------------------------------------
+Terraform  validate
+Terraform plan
+Terraform Apply
+
